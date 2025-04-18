@@ -1,0 +1,37 @@
+
+{
+  "glyphs": {
+    "E": {"ha": 640, "x_min": 91, "x_max": 558, "o": "m 91 0 l 91 670 l 558 670 l 558 574 l 203 574 l 203 386 l 513 386 l 513 290 l 203 290 l 203 96 l 558 96 l 558 0 l 91 0 z"},
+    "p": {"ha": 648, "x_min": 91, "x_max": 597, "o": "m 91 -200 l 91 484 l 183 484 l 183 420 q 41 252 41 365 q 153 71 41 126 q 295 40 220 40 q 531 161 447 40 q 597 359 597 259 q 487 566 597 498 q 323 606 421 606 q 183 553 239 606 l 183 -200 l 91 -200 m 318 129 q 198 161 243 129 q 149 229 154 192 q 143 290 143 267 q 218 430 143 379 q 322 456 266 456 q 427 429 380 456 q 502 359 473 403 q 519 284 519 332 q 466 160 519 208 q 318 129 428 129 z"},
+    "i": {"ha": 274, "x_min": 91, "x_max": 193, "o": "m 91 0 l 91 484 l 183 484 l 183 0 l 91 0 m 91 599 l 91 670 l 183 670 l 183 599 l 91 599 z"},
+    "T": {"ha": 578, "x_min": 10, "x_max": 568, "o": "m 10 670 l 568 670 l 568 569 l 345 569 l 345 0 l 233 0 l 233 569 l 10 569 l 10 670 z"},
+    "o": {"ha": 648, "x_min": 41, "x_max": 597, "o": "m 319 40 q 456 90 401 40 q 542 211 510 140 q 557 327 557 247 q 508 462 557 414 q 461 500 485 484 q 319 550 396 550 q 156 494 211 550 q 96 401 117 455 q 78 291 78 354 q 163 92 78 158 q 319 40 233 40 m 321 449 q 455 362 427 449 q 455 229 455 329 q 382 100 455 141 q 302 84 348 84 q 172 179 206 84 q 178 346 178 214 q 269 449 178 449 q 321 449 269 449 z"},
+    "n": {"ha": 648, "x_min": 91, "x_max": 580, "o": "m 91 0 l 91 484 l 183 484 l 183 420 q 327 498 260 485 q 378 502 348 502 q 500 472 467 502 q 520 430 512 458 q 580 333 580 402 l 580 0 l 488 0 l 488 300 q 453 398 488 373 q 387 417 429 417 q 292 395 333 417 q 189 294 214 359 l 189 0 l 91 0 z"},
+    "e": {"ha": 648, "x_min": 56, "x_max": 592, "o": "m 56 251 l 56 327 q 147 437 66 400 q 311 483 200 483 q 592 334 584 483 l 505 334 q 312 367 505 420 q 148 267 148 322 q 184 168 148 200 q 310 137 220 137 q 451 196 405 137 q 472 236 465 216 l 566 236 q 520 117 566 160 q 311 39 437 39 q 127 111 193 39 q 56 251 56 190 z"}
+  },
+  "familyName": "Inter",
+  "ascender": 800,
+  "descender": -200,
+  "underlinePosition": -100,
+  "underlineThickness": 50,
+  "boundingBox": {"yMin": -200, "xMin": 10, "yMax": 670, "xMax": 597},
+  "resolution": 1000,
+  "original_font_information": {
+    "format": 0,
+    "copyright": "Copyright © 2020 The Inter Project Authors. https://github.com/rsms/inter",
+    "fontFamily": "Inter",
+    "fontSubfamily": "Regular",
+    "uniqueID": "3.19;RSMS;Inter-Regular",
+    "fullName": "Inter Regular",
+    "version": "3.19",
+    "postScriptName": "Inter-Regular",
+    "designer": "Rasmus Andersson",
+    "description": "Inter is a typeface specially designed for user interfaces with focus on high legibility of small-to-medium sized text on computer screens.",
+    "manufacturerURL": "https://rsms.me/",
+    "designerURL": "https://rsms.me/",
+    "licence": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL",
+    "licenceURL": "http://scripts.sil.org/OFL"
+  },
+  "cssFontWeight": "normal",
+  "cssFontStyle": "normal"
+}
