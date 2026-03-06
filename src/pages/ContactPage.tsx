@@ -1,19 +1,32 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, Send, Check } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Check, Building2 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { useI18n } from "@/lib/i18n";
 
-const locations = [
-  { name: "AIIMS New Delhi", address: "Ansari Nagar, New Delhi 110029", email: "delhi@indrachavi.in", phone: "+91 11 2658 8500" },
-  { name: "KEM Hospital Mumbai", address: "Parel, Mumbai 400012", email: "mumbai@indrachavi.in", phone: "+91 22 2413 6051" },
-  { name: "CMC Vellore", address: "Vellore, Tamil Nadu 632004", email: "vellore@indrachavi.in", phone: "+91 416 228 1000" },
+const partners = [
+  {
+    name: "PGIMER",
+    full: "Postgraduate Institute of Medical Education & Research",
+    address: "Sector 12, Chandigarh 160012",
+    email: "pgimer@indrachavi.in",
+    phone: "+91 172 275 6565",
+  },
+  {
+    name: "DIC MDaRT UIET, Panjab University",
+    full: "Design Innovation Centre, University Institute of Engineering & Technology",
+    address: "Sector 25, Chandigarh 160014",
+    email: "dic.mdart@pu.ac.in",
+    phone: "+91 172 253 4818",
+  },
 ];
 
 const ContactPage = () => {
+  const { t } = useI18n();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -26,7 +39,7 @@ const ContactPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
-        <h1 className="text-3xl font-display font-bold text-foreground mb-2">Contact Us</h1>
+        <h1 className="text-3xl font-display font-bold text-foreground mb-2">{t("Contact")}</h1>
         <p className="text-muted-foreground">Reach out for partnerships, clinical inquiries, or technical support.</p>
       </motion.div>
 
@@ -63,19 +76,23 @@ const ContactPage = () => {
             <h3 className="font-display font-semibold text-foreground mb-3">Get in Touch</h3>
             <div className="space-y-3 text-sm">
               <div className="flex gap-2"><Mail className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">research@indrachavi.in</span></div>
-              <div className="flex gap-2"><Phone className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">+91 11 2658 8500</span></div>
+              <div className="flex gap-2"><Phone className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">+91 172 275 6565</span></div>
               <div className="flex gap-2"><Clock className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">Mon–Fri: 9AM–5PM IST</span></div>
             </div>
           </div>
 
-          <h3 className="font-display font-semibold text-foreground pt-2">Partner Laboratories</h3>
-          {locations.map((l, i) => (
+          <h3 className="font-display font-semibold text-foreground pt-2">Institutional Partners</h3>
+          {partners.map((l, i) => (
             <Card key={i}>
               <CardContent className="pt-4 text-sm space-y-2">
-                <h4 className="font-semibold text-foreground">{l.name}</h4>
-                <div className="flex gap-2"><MapPin className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.address}</span></div>
-                <div className="flex gap-2"><Mail className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.email}</span></div>
-                <div className="flex gap-2"><Phone className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.phone}</span></div>
+                <div className="flex items-center gap-2">
+                  <Building2 className="h-4 w-4 text-primary shrink-0" />
+                  <h4 className="font-semibold text-foreground">{l.name}</h4>
+                </div>
+                <p className="text-xs text-muted-foreground pl-6">{l.full}</p>
+                <div className="flex gap-2 pl-6"><MapPin className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.address}</span></div>
+                <div className="flex gap-2 pl-6"><Mail className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.email}</span></div>
+                <div className="flex gap-2 pl-6"><Phone className="h-4 w-4 text-primary shrink-0" /><span className="text-muted-foreground">{l.phone}</span></div>
               </CardContent>
             </Card>
           ))}
