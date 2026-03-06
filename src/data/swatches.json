@@ -1,0 +1,1855 @@
+{
+  "partA_mass_g": 1000.0,
+  "ratio_A_to_B": 10.0,
+  "loadings_percent": [
+    0.3,
+    0.6,
+    1.0
+  ],
+  "generated_at": "2026-01-18T21:26:45.546943Z",
+  "swatches": {
+    "0": {
+      "index": 0,
+      "lab": [
+        90.0,
+        0.5,
+        1.0
+      ],
+      "hex": "#e4e2e0",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.27,
+        "Brilliant Yellow": 4.93,
+        "Yellow": 2.96,
+        "Brilliant White": 29.55,
+        "Black": 0.49,
+        "Green": 0.99,
+        "Brilliant Red": 5.91,
+        "Blue": 6.9
+      }
+    },
+    "1": {
+      "index": 1,
+      "lab": [
+        82.0,
+        0.5,
+        3.0
+      ],
+      "hex": "#cfcbc6",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.27,
+        "Brilliant Yellow": 4.93,
+        "Yellow": 2.96,
+        "Brilliant White": 29.55,
+        "Black": 0.49,
+        "Green": 0.99,
+        "Brilliant Red": 5.91,
+        "Blue": 6.9
+      }
+    },
+    "2": {
+      "index": 2,
+      "lab": [
+        78.0,
+        2.0,
+        10.0
+      ],
+      "hex": "#ccbfaf",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.29,
+        "Brilliant Yellow": 7.24,
+        "Yellow": 4.51,
+        "Brilliant White": 28.96,
+        "Black": 0.48,
+        "Green": 0.97,
+        "Brilliant Red": 5.79,
+        "Blue": 6.76
+      }
+    },
+    "3": {
+      "index": 3,
+      "lab": [
+        75.83470153808594,
+        4.313799858093262,
+        16.736299514770508
+      ],
+      "hex": "#cfb79c",
+      "distribution_pct": {
+        "Technovent Master Colour": 43.35,
+        "Brilliant Yellow": 8.75,
+        "Yellow": 5.51,
+        "Brilliant White": 28.58,
+        "Black": 0.48,
+        "Green": 0.95,
+        "Brilliant Red": 5.72,
+        "Blue": 6.67
+      }
+    },
+    "4": {
+      "index": 4,
+      "lab": [
+        73.35299682617188,
+        5.13730001449585,
+        10.50100040435791
+      ],
+      "hex": "#c5b0a1",
+      "distribution_pct": {
+        "Technovent Master Colour": 51.68,
+        "Brilliant Yellow": 7.46,
+        "Yellow": 4.65,
+        "Brilliant White": 21.53,
+        "Black": 0.98,
+        "Green": 0.98,
+        "Brilliant Red": 5.87,
+        "Blue": 6.85
+      }
+    },
+    "5": {
+      "index": 5,
+      "lab": [
+        71.05039978027344,
+        7.797900199890137,
+        11.773900032043457
+      ],
+      "hex": "#c5a899",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.01,
+        "Brilliant Yellow": 7.67,
+        "Yellow": 4.79,
+        "Brilliant White": 21.23,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 8.61,
+        "Blue": 6.76
+      }
+    },
+    "6": {
+      "index": 6,
+      "lab": [
+        70.59400177001953,
+        4.15939998626709,
+        13.418999671936035
+      ],
+      "hex": "#bea995",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.79,
+        "Brilliant Yellow": 8.13,
+        "Yellow": 5.09,
+        "Brilliant White": 21.4,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 5.84,
+        "Blue": 6.81
+      }
+    },
+    "7": {
+      "index": 7,
+      "lab": [
+        69.00199890136719,
+        13.61050033569336,
+        21.969900131225586
+      ],
+      "hex": "#ce9f81",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.21,
+        "Brilliant Yellow": 9.24,
+        "Yellow": 5.85,
+        "Brilliant White": 20.75,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.47,
+        "Blue": 6.6
+      }
+    },
+    "8": {
+      "index": 8,
+      "lab": [
+        68.28810119628906,
+        4.9095001220703125,
+        22.08300018310547
+      ],
+      "hex": "#bea27f",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.04,
+        "Brilliant Yellow": 9.42,
+        "Yellow": 5.96,
+        "Brilliant White": 21.15,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 5.77,
+        "Blue": 6.73
+      }
+    },
+    "9": {
+      "index": 9,
+      "lab": [
+        67.9791030883789,
+        12.030200004577637,
+        14.834099769592285
+      ],
+      "hex": "#c59d8c",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.91,
+        "Brilliant Yellow": 8.3,
+        "Yellow": 5.22,
+        "Brilliant White": 20.97,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 10.02,
+        "Blue": 6.67
+      }
+    },
+    "10": {
+      "index": 10,
+      "lab": [
+        67.32420349121094,
+        7.616300106048584,
+        16.810300827026367
+      ],
+      "hex": "#bd9e86",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.57,
+        "Brilliant Yellow": 8.79,
+        "Yellow": 5.54,
+        "Brilliant White": 21.02,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 8.46,
+        "Blue": 6.69
+      }
+    },
+    "11": {
+      "index": 11,
+      "lab": [
+        66.98609924316406,
+        16.22920036315918,
+        15.381999969482422
+      ],
+      "hex": "#c99888",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.64,
+        "Brilliant Yellow": 8.38,
+        "Yellow": 5.27,
+        "Brilliant White": 20.83,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.36,
+        "Blue": 6.63
+      }
+    },
+    "12": {
+      "index": 12,
+      "lab": [
+        66.7677001953125,
+        14.534500122070312,
+        10.6225004196167
+      ],
+      "hex": "#c39990",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.43,
+        "Brilliant Yellow": 7.33,
+        "Yellow": 4.57,
+        "Brilliant White": 21.07,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 10.97,
+        "Blue": 6.71
+      }
+    },
+    "13": {
+      "index": 13,
+      "lab": [
+        66.39009857177734,
+        5.991600036621094,
+        10.69320011138916
+      ],
+      "hex": "#b49d8f",
+      "distribution_pct": {
+        "Technovent Master Colour": 51.61,
+        "Brilliant Yellow": 7.51,
+        "Yellow": 4.68,
+        "Brilliant White": 21.52,
+        "Black": 0.98,
+        "Green": 0.98,
+        "Brilliant Red": 5.87,
+        "Blue": 6.85
+      }
+    },
+    "14": {
+      "index": 14,
+      "lab": [
+        65.56179809570312,
+        3.0957999229431152,
+        17.47209930419922
+      ],
+      "hex": "#b19c80",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.56,
+        "Brilliant Yellow": 9.04,
+        "Yellow": 5.7,
+        "Brilliant White": 21.23,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 5.79,
+        "Blue": 6.75
+      }
+    },
+    "15": {
+      "index": 15,
+      "lab": [
+        65.44920349121094,
+        20.017799377441406,
+        20.106000900268555
+      ],
+      "hex": "#cd917c",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.55,
+        "Brilliant Yellow": 9.21,
+        "Yellow": 5.83,
+        "Brilliant White": 20.68,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.28,
+        "Blue": 6.58
+      }
+    },
+    "16": {
+      "index": 16,
+      "lab": [
+        63.75210189819336,
+        12.281499862670898,
+        21.250999450683594
+      ],
+      "hex": "#bd9275",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.57,
+        "Brilliant Yellow": 9.26,
+        "Yellow": 5.86,
+        "Brilliant White": 20.79,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.02,
+        "Blue": 6.61
+      }
+    },
+    "17": {
+      "index": 17,
+      "lab": [
+        63.68439865112305,
+        3.698199987411499,
+        12.826899528503418
+      ],
+      "hex": "#aa9784",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.98,
+        "Brilliant Yellow": 7.99,
+        "Yellow": 5.0,
+        "Brilliant White": 21.43,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 5.84,
+        "Blue": 6.82
+      }
+    },
+    "18": {
+      "index": 18,
+      "lab": [
+        63.48270034790039,
+        14.126399993896484,
+        14.349200248718262
+      ],
+      "hex": "#bb9081",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.46,
+        "Brilliant Yellow": 8.17,
+        "Yellow": 5.13,
+        "Brilliant White": 20.93,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 10.75,
+        "Blue": 6.66
+      }
+    },
+    "19": {
+      "index": 19,
+      "lab": [
+        63.423301696777344,
+        9.824799537658691,
+        14.086999893188477
+      ],
+      "hex": "#b49381",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.75,
+        "Brilliant Yellow": 8.16,
+        "Yellow": 5.12,
+        "Brilliant White": 21.07,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 9.28,
+        "Blue": 6.7
+      }
+    },
+    "20": {
+      "index": 20,
+      "lab": [
+        63.41889953613281,
+        7.884399890899658,
+        17.261499404907227
+      ],
+      "hex": "#b3947b",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.37,
+        "Brilliant Yellow": 8.89,
+        "Yellow": 5.61,
+        "Brilliant White": 21.0,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.55,
+        "Blue": 6.68
+      }
+    },
+    "21": {
+      "index": 21,
+      "lab": [
+        62.66080093383789,
+        4.921199798583984,
+        17.811800003051758
+      ],
+      "hex": "#ac9478",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.45,
+        "Brilliant Yellow": 9.11,
+        "Yellow": 5.76,
+        "Brilliant White": 21.21,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 5.79,
+        "Blue": 6.75
+      }
+    },
+    "22": {
+      "index": 22,
+      "lab": [
+        62.145198822021484,
+        7.855599880218506,
+        22.027799606323242
+      ],
+      "hex": "#b19070",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.81,
+        "Brilliant Yellow": 9.32,
+        "Yellow": 5.89,
+        "Brilliant White": 20.92,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.51,
+        "Blue": 6.66
+      }
+    },
+    "23": {
+      "index": 23,
+      "lab": [
+        62.11869812011719,
+        20.92300033569336,
+        17.12619972229004
+      ],
+      "hex": "#c38879",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.14,
+        "Brilliant Yellow": 8.76,
+        "Yellow": 5.52,
+        "Brilliant White": 20.76,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.32,
+        "Blue": 6.61
+      }
+    },
+    "24": {
+      "index": 24,
+      "lab": [
+        61.831298828125,
+        17.413000106811523,
+        12.088199615478516
+      ],
+      "hex": "#bb8a81",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.59,
+        "Brilliant Yellow": 7.65,
+        "Yellow": 4.78,
+        "Brilliant White": 20.97,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.44,
+        "Blue": 6.67
+      }
+    },
+    "25": {
+      "index": 25,
+      "lab": [
+        61.71179962158203,
+        12.116800308227539,
+        9.829299926757812
+      ],
+      "hex": "#b18d84",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.36,
+        "Brilliant Yellow": 7.18,
+        "Yellow": 4.47,
+        "Brilliant White": 21.18,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 10.15,
+        "Blue": 6.74
+      }
+    },
+    "26": {
+      "index": 26,
+      "lab": [
+        61.28839874267578,
+        6.653600215911865,
+        9.021699905395508
+      ],
+      "hex": "#a68f84",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.19,
+        "Brilliant Yellow": 7.05,
+        "Yellow": 4.38,
+        "Brilliant White": 21.38,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 8.26,
+        "Blue": 6.8
+      }
+    },
+    "27": {
+      "index": 27,
+      "lab": [
+        60.67319869995117,
+        26.845500946044922,
+        19.378799438476562
+      ],
+      "hex": "#c97f72",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.55,
+        "Brilliant Yellow": 9.21,
+        "Yellow": 5.83,
+        "Brilliant White": 20.68,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.28,
+        "Blue": 6.58
+      }
+    },
+    "28": {
+      "index": 28,
+      "lab": [
+        60.562400817871094,
+        22.54560089111328,
+        12.32919979095459
+      ],
+      "hex": "#bf837d",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.52,
+        "Brilliant Yellow": 7.7,
+        "Yellow": 4.82,
+        "Brilliant White": 20.96,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.43,
+        "Blue": 6.67
+      }
+    },
+    "29": {
+      "index": 29,
+      "lab": [
+        60.380001068115234,
+        6.369200229644775,
+        15.296099662780762
+      ],
+      "hex": "#a78d77",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.38,
+        "Brilliant Yellow": 8.47,
+        "Yellow": 5.33,
+        "Brilliant White": 21.12,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 8.05,
+        "Blue": 6.72
+      }
+    },
+    "30": {
+      "index": 30,
+      "lab": [
+        60.192901611328125,
+        16.216899871826172,
+        18.712799072265625
+      ],
+      "hex": "#b78671",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.69,
+        "Brilliant Yellow": 9.1,
+        "Yellow": 5.76,
+        "Brilliant White": 20.7,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.29,
+        "Blue": 6.59
+      }
+    },
+    "31": {
+      "index": 31,
+      "lab": [
+        59.95140075683594,
+        10.041799545288086,
+        11.467300415039062
+      ],
+      "hex": "#a98a7d",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.46,
+        "Brilliant Yellow": 7.57,
+        "Yellow": 4.73,
+        "Brilliant White": 21.18,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 9.4,
+        "Blue": 6.74
+      }
+    },
+    "32": {
+      "index": 32,
+      "lab": [
+        59.26919937133789,
+        10.825900077819824,
+        16.356399536132812
+      ],
+      "hex": "#ab8773",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.8,
+        "Brilliant Yellow": 8.65,
+        "Yellow": 5.45,
+        "Brilliant White": 20.95,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 9.58,
+        "Blue": 6.66
+      }
+    },
+    "33": {
+      "index": 33,
+      "lab": [
+        58.015098571777344,
+        13.032500267028809,
+        11.177200317382812
+      ],
+      "hex": "#a98379",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.7,
+        "Brilliant Yellow": 7.47,
+        "Yellow": 4.66,
+        "Brilliant White": 21.1,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 10.44,
+        "Blue": 6.71
+      }
+    },
+    "34": {
+      "index": 34,
+      "lab": [
+        57.99570083618164,
+        9.030900001525879,
+        26.55139923095703
+      ],
+      "hex": "#aa855d",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.48,
+        "Brilliant Yellow": 9.3,
+        "Yellow": 5.88,
+        "Brilliant White": 20.88,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.91,
+        "Blue": 6.64
+      }
+    },
+    "35": {
+      "index": 35,
+      "lab": [
+        57.59619903564453,
+        8.431900024414062,
+        19.596099853515625
+      ],
+      "hex": "#a58469",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.65,
+        "Brilliant Yellow": 9.31,
+        "Yellow": 5.89,
+        "Brilliant White": 20.9,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.7,
+        "Blue": 6.65
+      }
+    },
+    "36": {
+      "index": 36,
+      "lab": [
+        57.56779861450195,
+        12.809800148010254,
+        22.777599334716797
+      ],
+      "hex": "#ad8163",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.43,
+        "Brilliant Yellow": 9.25,
+        "Yellow": 5.85,
+        "Brilliant White": 20.77,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.2,
+        "Blue": 6.61
+      }
+    },
+    "37": {
+      "index": 37,
+      "lab": [
+        57.224998474121094,
+        27.210500717163086,
+        18.603700637817383
+      ],
+      "hex": "#bf766a",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.72,
+        "Brilliant Yellow": 9.08,
+        "Yellow": 5.74,
+        "Brilliant White": 20.7,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.29,
+        "Blue": 6.59
+      }
+    },
+    "38": {
+      "index": 38,
+      "lab": [
+        56.927799224853516,
+        7.5131001472473145,
+        11.869799613952637
+      ],
+      "hex": "#9d8374",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.06,
+        "Brilliant Yellow": 7.69,
+        "Yellow": 4.81,
+        "Brilliant White": 21.24,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 8.51,
+        "Blue": 6.76
+      }
+    },
+    "39": {
+      "index": 39,
+      "lab": [
+        56.87139892578125,
+        3.4477999210357666,
+        13.187100410461426
+      ],
+      "hex": "#978672",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.87,
+        "Brilliant Yellow": 8.07,
+        "Yellow": 5.06,
+        "Brilliant White": 21.41,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 5.84,
+        "Blue": 6.81
+      }
+    },
+    "40": {
+      "index": 40,
+      "lab": [
+        56.81919860839844,
+        4.739999771118164,
+        18.476200103759766
+      ],
+      "hex": "#9c8569",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.26,
+        "Brilliant Yellow": 9.26,
+        "Yellow": 5.85,
+        "Brilliant White": 21.18,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 5.78,
+        "Blue": 6.74
+      }
+    },
+    "41": {
+      "index": 41,
+      "lab": [
+        56.53919982910156,
+        17.34779930114746,
+        17.12310028076172
+      ],
+      "hex": "#ae7c6b",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.14,
+        "Brilliant Yellow": 8.76,
+        "Yellow": 5.52,
+        "Brilliant White": 20.76,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.32,
+        "Blue": 6.61
+      }
+    },
+    "42": {
+      "index": 42,
+      "lab": [
+        55.532501220703125,
+        19.94070053100586,
+        12.832099914550781
+      ],
+      "hex": "#ad7870",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.37,
+        "Brilliant Yellow": 7.81,
+        "Yellow": 4.89,
+        "Brilliant White": 20.94,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.42,
+        "Blue": 6.66
+      }
+    },
+    "43": {
+      "index": 43,
+      "lab": [
+        55.38100051879883,
+        12.425100326538086,
+        15.979100227355957
+      ],
+      "hex": "#a37c6a",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.47,
+        "Brilliant Yellow": 8.55,
+        "Yellow": 5.38,
+        "Brilliant White": 20.91,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 10.13,
+        "Blue": 6.65
+      }
+    },
+    "44": {
+      "index": 44,
+      "lab": [
+        54.20159912109375,
+        11.236900329589844,
+        26.39150047302246
+      ],
+      "hex": "#a27955",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.86,
+        "Brilliant Yellow": 9.27,
+        "Yellow": 5.87,
+        "Brilliant White": 20.82,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 9.66,
+        "Blue": 6.62
+      }
+    },
+    "45": {
+      "index": 45,
+      "lab": [
+        54.161399841308594,
+        18.338199615478516,
+        23.0226993560791
+      ],
+      "hex": "#ab755b",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.55,
+        "Brilliant Yellow": 9.21,
+        "Yellow": 5.83,
+        "Brilliant White": 20.68,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.28,
+        "Blue": 6.58
+      }
+    },
+    "46": {
+      "index": 46,
+      "lab": [
+        53.747100830078125,
+        8.450300216674805,
+        18.75979995727539
+      ],
+      "hex": "#9a7a61",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.77,
+        "Brilliant Yellow": 9.21,
+        "Yellow": 5.83,
+        "Brilliant White": 20.92,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.72,
+        "Blue": 6.66
+      }
+    },
+    "47": {
+      "index": 47,
+      "lab": [
+        53.72050094604492,
+        8.84749984741211,
+        30.586599349975586
+      ],
+      "hex": "#9f7a4c",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.53,
+        "Brilliant Yellow": 9.3,
+        "Yellow": 5.89,
+        "Brilliant White": 20.89,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.85,
+        "Blue": 6.65
+      }
+    },
+    "48": {
+      "index": 48,
+      "lab": [
+        53.37919998168945,
+        15.282400131225586,
+        12.912699699401855
+      ],
+      "hex": "#a0756a",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.55,
+        "Brilliant Yellow": 7.84,
+        "Yellow": 4.91,
+        "Brilliant White": 20.96,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.17,
+        "Blue": 6.67
+      }
+    },
+    "49": {
+      "index": 49,
+      "lab": [
+        52.70940017700195,
+        9.499500274658203,
+        14.206399917602539
+      ],
+      "hex": "#977766",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.81,
+        "Brilliant Yellow": 8.19,
+        "Yellow": 5.14,
+        "Brilliant White": 21.08,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 9.16,
+        "Blue": 6.71
+      }
+    },
+    "50": {
+      "index": 50,
+      "lab": [
+        52.44660186767578,
+        14.333900451660156,
+        26.093599319458008
+      ],
+      "hex": "#a27351",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.01,
+        "Brilliant Yellow": 9.23,
+        "Yellow": 5.84,
+        "Brilliant White": 20.73,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.72,
+        "Blue": 6.59
+      }
+    },
+    "51": {
+      "index": 51,
+      "lab": [
+        51.58150100708008,
+        15.638299942016602,
+        17.703699111938477
+      ],
+      "hex": "#9e705e",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.07,
+        "Brilliant Yellow": 8.89,
+        "Yellow": 5.61,
+        "Brilliant White": 20.75,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.19,
+        "Blue": 6.6
+      }
+    },
+    "52": {
+      "index": 52,
+      "lab": [
+        51.501399993896484,
+        6.15749979019165,
+        11.86970043182373
+      ],
+      "hex": "#8d7667",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.46,
+        "Brilliant Yellow": 7.71,
+        "Yellow": 4.81,
+        "Brilliant White": 21.28,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 8.04,
+        "Blue": 6.77
+      }
+    },
+    "53": {
+      "index": 53,
+      "lab": [
+        51.427398681640625,
+        8.021499633789062,
+        22.782899856567383
+      ],
+      "hex": "#957554",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.76,
+        "Brilliant Yellow": 9.32,
+        "Yellow": 5.89,
+        "Brilliant White": 20.91,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.56,
+        "Blue": 6.65
+      }
+    },
+    "54": {
+      "index": 54,
+      "lab": [
+        51.38909912109375,
+        11.79419994354248,
+        19.096500396728516
+      ],
+      "hex": "#99725a",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.74,
+        "Brilliant Yellow": 9.24,
+        "Yellow": 5.85,
+        "Brilliant White": 20.8,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 9.86,
+        "Blue": 6.62
+      }
+    },
+    "55": {
+      "index": 55,
+      "lab": [
+        51.303001403808594,
+        20.85449981689453,
+        17.566099166870117
+      ],
+      "hex": "#a56c5d",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.02,
+        "Brilliant Yellow": 8.85,
+        "Yellow": 5.59,
+        "Brilliant White": 20.74,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 11.31,
+        "Blue": 6.6
+      }
+    },
+    "56": {
+      "index": 56,
+      "lab": [
+        51.07400131225586,
+        5.545899868011475,
+        7.459199905395508
+      ],
+      "hex": "#88766d",
+      "distribution_pct": {
+        "Technovent Master Colour": 55.0,
+        "Brilliant Yellow": 5.0,
+        "Yellow": 3.0,
+        "Brilliant White": 22.0,
+        "Black": 1.0,
+        "Green": 1.0,
+        "Brilliant Red": 6.0,
+        "Blue": 7.0
+      }
+    },
+    "57": {
+      "index": 57,
+      "lab": [
+        50.58549880981445,
+        7.6844000816345215,
+        16.63920021057129
+      ],
+      "hex": "#8f735d",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.6,
+        "Brilliant Yellow": 8.76,
+        "Yellow": 5.52,
+        "Brilliant White": 21.03,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 8.49,
+        "Blue": 6.69
+      }
+    },
+    "58": {
+      "index": 58,
+      "lab": [
+        50.54909896850586,
+        12.411399841308594,
+        9.746500015258789
+      ],
+      "hex": "#937068",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.3,
+        "Brilliant Yellow": 7.16,
+        "Yellow": 4.45,
+        "Brilliant White": 21.18,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 10.26,
+        "Blue": 6.74
+      }
+    },
+    "59": {
+      "index": 59,
+      "lab": [
+        50.54499816894531,
+        18.943899154663086,
+        9.263899803161621
+      ],
+      "hex": "#9c6c69",
+      "distribution_pct": {
+        "Technovent Master Colour": 47.42,
+        "Brilliant Yellow": 7.01,
+        "Yellow": 4.36,
+        "Brilliant White": 21.09,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 11.5,
+        "Blue": 6.71
+      }
+    },
+    "60": {
+      "index": 60,
+      "lab": [
+        50.32899856567383,
+        13.304400444030762,
+        33.23780059814453
+      ],
+      "hex": "#9d6e3f",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.29,
+        "Brilliant Yellow": 9.25,
+        "Yellow": 5.85,
+        "Brilliant White": 20.76,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.37,
+        "Blue": 6.6
+      }
+    },
+    "61": {
+      "index": 61,
+      "lab": [
+        49.57749938964844,
+        9.895999908447266,
+        13.09850025177002
+      ],
+      "hex": "#8e6f60",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.02,
+        "Brilliant Yellow": 7.94,
+        "Yellow": 4.97,
+        "Brilliant White": 21.11,
+        "Black": 0.96,
+        "Green": 0.96,
+        "Brilliant Red": 9.32,
+        "Blue": 6.72
+      }
+    },
+    "62": {
+      "index": 62,
+      "lab": [
+        49.31990051269531,
+        11.962699890136719,
+        26.491500854492188
+      ],
+      "hex": "#966d49",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.66,
+        "Brilliant Yellow": 9.26,
+        "Yellow": 5.86,
+        "Brilliant White": 20.8,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 9.91,
+        "Blue": 6.62
+      }
+    },
+    "63": {
+      "index": 63,
+      "lab": [
+        48.28519821166992,
+        7.718599796295166,
+        20.46109962463379
+      ],
+      "hex": "#8b6d51",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.85,
+        "Brilliant Yellow": 9.32,
+        "Yellow": 5.9,
+        "Brilliant White": 20.92,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 8.46,
+        "Blue": 6.66
+      }
+    },
+    "64": {
+      "index": 64,
+      "lab": [
+        48.07550048828125,
+        13.956199645996094,
+        21.854900360107422
+      ],
+      "hex": "#94694e",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.11,
+        "Brilliant Yellow": 9.24,
+        "Yellow": 5.84,
+        "Brilliant White": 20.74,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.59,
+        "Blue": 6.6
+      }
+    },
+    "65": {
+      "index": 65,
+      "lab": [
+        47.72890090942383,
+        15.663399696350098,
+        13.285300254821777
+      ],
+      "hex": "#92675c",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.34,
+        "Brilliant Yellow": 7.92,
+        "Yellow": 4.96,
+        "Brilliant White": 20.93,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 11.3,
+        "Blue": 6.66
+      }
+    },
+    "66": {
+      "index": 66,
+      "lab": [
+        47.59600067138672,
+        12.889699935913086,
+        16.01300048828125
+      ],
+      "hex": "#8f6857",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.32,
+        "Brilliant Yellow": 8.55,
+        "Yellow": 5.39,
+        "Brilliant White": 20.9,
+        "Black": 0.95,
+        "Green": 0.95,
+        "Brilliant Red": 10.29,
+        "Blue": 6.65
+      }
+    },
+    "67": {
+      "index": 67,
+      "lab": [
+        47.402400970458984,
+        6.072299957275391,
+        11.480899810791016
+      ],
+      "hex": "#826c5d",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.6,
+        "Brilliant Yellow": 7.62,
+        "Yellow": 4.76,
+        "Brilliant White": 21.3,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 8.01,
+        "Blue": 6.78
+      }
+    },
+    "68": {
+      "index": 68,
+      "lab": [
+        46.40769958496094,
+        14.6141996383667,
+        30.721200942993164
+      ],
+      "hex": "#93643b",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.93,
+        "Brilliant Yellow": 9.23,
+        "Yellow": 5.84,
+        "Brilliant White": 20.72,
+        "Black": 0.94,
+        "Green": 0.94,
+        "Brilliant Red": 10.81,
+        "Blue": 6.59
+      }
+    },
+    "69": {
+      "index": 69,
+      "lab": [
+        46.159000396728516,
+        9.800399780273438,
+        8.610799789428711
+      ],
+      "hex": "#83675f",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.39,
+        "Brilliant Yellow": 6.93,
+        "Yellow": 4.29,
+        "Brilliant White": 21.3,
+        "Black": 0.97,
+        "Green": 0.97,
+        "Brilliant Red": 9.37,
+        "Blue": 6.78
+      }
+    },
+    "70": {
+      "index": 70,
+      "lab": [
+        44.987300872802734,
+        9.512200355529785,
+        15.389100074768066
+      ],
+      "hex": "#836451",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.37,
+        "Brilliant Yellow": 8.79,
+        "Yellow": 5.53,
+        "Brilliant White": 15.9,
+        "Black": 6.96,
+        "Green": 0.99,
+        "Brilliant Red": 9.51,
+        "Blue": 6.96
+      }
+    },
+    "71": {
+      "index": 71,
+      "lab": [
+        44.887699127197266,
+        9.843999862670898,
+        20.371400833129883
+      ],
+      "hex": "#856349",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.13,
+        "Brilliant Yellow": 9.66,
+        "Yellow": 6.11,
+        "Brilliant White": 15.77,
+        "Black": 6.9,
+        "Green": 0.99,
+        "Brilliant Red": 9.55,
+        "Blue": 6.9
+      }
+    },
+    "72": {
+      "index": 72,
+      "lab": [
+        44.17359924316406,
+        15.531000137329102,
+        17.76740074157715
+      ],
+      "hex": "#8a5e4c",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.93,
+        "Brilliant Yellow": 9.25,
+        "Yellow": 5.84,
+        "Brilliant White": 15.68,
+        "Black": 6.86,
+        "Green": 0.98,
+        "Brilliant Red": 11.59,
+        "Blue": 6.86
+      }
+    },
+    "73": {
+      "index": 73,
+      "lab": [
+        44.02479934692383,
+        17.49880027770996,
+        26.88330078125
+      ],
+      "hex": "#8f5c3c",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.38,
+        "Brilliant Yellow": 9.57,
+        "Yellow": 6.05,
+        "Brilliant White": 15.62,
+        "Black": 6.84,
+        "Green": 0.98,
+        "Brilliant Red": 11.72,
+        "Blue": 6.84
+      }
+    },
+    "74": {
+      "index": 74,
+      "lab": [
+        43.942298889160156,
+        4.924200057983398,
+        13.208900451660156
+      ],
+      "hex": "#786452",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.86,
+        "Brilliant Yellow": 8.41,
+        "Yellow": 5.27,
+        "Brilliant White": 16.2,
+        "Black": 7.09,
+        "Green": 1.01,
+        "Brilliant Red": 6.08,
+        "Blue": 7.09
+      }
+    },
+    "75": {
+      "index": 75,
+      "lab": [
+        43.33980178833008,
+        14.557900428771973,
+        34.72990036010742
+      ],
+      "hex": "#8b5c2c",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.79,
+        "Brilliant Yellow": 9.59,
+        "Yellow": 6.07,
+        "Brilliant White": 15.66,
+        "Black": 6.85,
+        "Green": 0.98,
+        "Brilliant Red": 11.21,
+        "Blue": 6.85
+      }
+    },
+    "76": {
+      "index": 76,
+      "lab": [
+        42.47909927368164,
+        12.629799842834473,
+        20.21179962158203
+      ],
+      "hex": "#825c44",
+      "distribution_pct": {
+        "Technovent Master Colour": 43.34,
+        "Brilliant Yellow": 9.62,
+        "Yellow": 6.08,
+        "Brilliant White": 15.7,
+        "Black": 6.87,
+        "Green": 0.98,
+        "Brilliant Red": 10.54,
+        "Blue": 6.87
+      }
+    },
+    "77": {
+      "index": 77,
+      "lab": [
+        42.442298889160156,
+        5.5335001945495605,
+        8.469900131225586
+      ],
+      "hex": "#736157",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.36,
+        "Brilliant Yellow": 7.28,
+        "Yellow": 4.51,
+        "Brilliant White": 16.37,
+        "Black": 7.16,
+        "Green": 1.02,
+        "Brilliant Red": 6.14,
+        "Blue": 7.16
+      }
+    },
+    "78": {
+      "index": 78,
+      "lab": [
+        42.15399932861328,
+        14.524800300598145,
+        11.715999603271484
+      ],
+      "hex": "#815a51",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.01,
+        "Brilliant Yellow": 7.88,
+        "Yellow": 4.92,
+        "Brilliant White": 15.9,
+        "Black": 6.96,
+        "Green": 0.99,
+        "Brilliant Red": 11.38,
+        "Blue": 6.96
+      }
+    },
+    "79": {
+      "index": 79,
+      "lab": [
+        42.1510009765625,
+        9.043899536132812,
+        12.934200286865234
+      ],
+      "hex": "#795e4f",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.25,
+        "Brilliant Yellow": 8.23,
+        "Yellow": 5.15,
+        "Brilliant White": 15.99,
+        "Black": 7.0,
+        "Green": 1.0,
+        "Brilliant Red": 9.39,
+        "Blue": 7.0
+      }
+    },
+    "80": {
+      "index": 80,
+      "lab": [
+        40.48460006713867,
+        8.22189998626709,
+        18.25950050354004
+      ],
+      "hex": "#765a42",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.88,
+        "Brilliant Yellow": 9.47,
+        "Yellow": 5.98,
+        "Brilliant White": 15.84,
+        "Black": 6.93,
+        "Green": 0.99,
+        "Brilliant Red": 8.99,
+        "Blue": 6.93
+      }
+    },
+    "81": {
+      "index": 81,
+      "lab": [
+        40.47600173950195,
+        16.79490089416504,
+        34.13779830932617
+      ],
+      "hex": "#865427",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.38,
+        "Brilliant Yellow": 9.57,
+        "Yellow": 6.05,
+        "Brilliant White": 15.62,
+        "Black": 6.84,
+        "Green": 0.98,
+        "Brilliant Red": 11.72,
+        "Blue": 6.84
+      }
+    },
+    "82": {
+      "index": 82,
+      "lab": [
+        39.958499908447266,
+        11.74429988861084,
+        14.505499839782715
+      ],
+      "hex": "#785747",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.98,
+        "Brilliant Yellow": 8.56,
+        "Yellow": 5.38,
+        "Brilliant White": 15.88,
+        "Black": 6.95,
+        "Green": 0.99,
+        "Brilliant Red": 10.32,
+        "Blue": 6.95
+      }
+    },
+    "83": {
+      "index": 83,
+      "lab": [
+        38.49689865112305,
+        13.994600296020508,
+        9.946200370788574
+      ],
+      "hex": "#76524b",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.7,
+        "Brilliant Yellow": 7.47,
+        "Yellow": 4.65,
+        "Brilliant White": 15.97,
+        "Black": 6.99,
+        "Green": 1.0,
+        "Brilliant Red": 11.23,
+        "Blue": 6.99
+      }
+    },
+    "84": {
+      "index": 84,
+      "lab": [
+        36.905399322509766,
+        5.6097002029418945,
+        10.308099746704102
+      ],
+      "hex": "#665347",
+      "distribution_pct": {
+        "Technovent Master Colour": 49.77,
+        "Brilliant Yellow": 7.72,
+        "Yellow": 4.81,
+        "Brilliant White": 16.3,
+        "Black": 7.13,
+        "Green": 1.02,
+        "Brilliant Red": 6.11,
+        "Blue": 7.13
+      }
+    },
+    "85": {
+      "index": 85,
+      "lab": [
+        36.56520080566406,
+        19.908899307250977,
+        38.608001708984375
+      ],
+      "hex": "#804815",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.38,
+        "Brilliant Yellow": 9.57,
+        "Yellow": 6.05,
+        "Brilliant White": 15.62,
+        "Black": 6.84,
+        "Green": 0.98,
+        "Brilliant Red": 11.72,
+        "Blue": 6.84
+      }
+    },
+    "86": {
+      "index": 86,
+      "lab": [
+        36.21149826049805,
+        1.5055999755859375,
+        13.101799964904785
+      ],
+      "hex": "#5f5440",
+      "distribution_pct": {
+        "Technovent Master Colour": 48.89,
+        "Brilliant Yellow": 8.38,
+        "Yellow": 5.25,
+        "Brilliant White": 16.21,
+        "Black": 7.09,
+        "Green": 1.01,
+        "Brilliant Red": 6.08,
+        "Blue": 7.09
+      }
+    },
+    "87": {
+      "index": 87,
+      "lab": [
+        35.52859878540039,
+        9.1673002243042,
+        11.72089958190918
+      ],
+      "hex": "#684e41",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.58,
+        "Brilliant Yellow": 7.94,
+        "Yellow": 4.96,
+        "Brilliant White": 16.03,
+        "Black": 7.01,
+        "Green": 1.0,
+        "Brilliant Red": 9.46,
+        "Blue": 7.01
+      }
+    },
+    "88": {
+      "index": 88,
+      "lab": [
+        35.0,
+        15.0,
+        18.0
+      ],
+      "hex": "#714936",
+      "distribution_pct": {
+        "Technovent Master Colour": 43.01,
+        "Brilliant Yellow": 9.31,
+        "Yellow": 5.88,
+        "Brilliant White": 15.69,
+        "Black": 6.86,
+        "Green": 0.98,
+        "Brilliant Red": 11.4,
+        "Blue": 6.86
+      }
+    },
+    "89": {
+      "index": 89,
+      "lab": [
+        34.8744010925293,
+        16.43899917602539,
+        41.47380065917969
+      ],
+      "hex": "#784708",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.38,
+        "Brilliant Yellow": 9.57,
+        "Yellow": 6.05,
+        "Brilliant White": 15.62,
+        "Black": 6.84,
+        "Green": 0.98,
+        "Brilliant Red": 11.72,
+        "Blue": 6.84
+      }
+    },
+    "90": {
+      "index": 90,
+      "lab": [
+        33.82389831542969,
+        9.961600303649902,
+        16.486099243164062
+      ],
+      "hex": "#674936",
+      "distribution_pct": {
+        "Technovent Master Colour": 44.91,
+        "Brilliant Yellow": 9.04,
+        "Yellow": 5.69,
+        "Brilliant White": 15.85,
+        "Black": 6.94,
+        "Green": 0.99,
+        "Brilliant Red": 9.65,
+        "Blue": 6.94
+      }
+    },
+    "91": {
+      "index": 91,
+      "lab": [
+        32.686100006103516,
+        21.51959991455078,
+        37.84880065917969
+      ],
+      "hex": "#773e0e",
+      "distribution_pct": {
+        "Technovent Master Colour": 42.38,
+        "Brilliant Yellow": 9.57,
+        "Yellow": 6.05,
+        "Brilliant White": 15.62,
+        "Black": 6.84,
+        "Green": 0.98,
+        "Brilliant Red": 11.72,
+        "Blue": 6.84
+      }
+    },
+    "92": {
+      "index": 92,
+      "lab": [
+        31.348600387573242,
+        8.670299530029297,
+        10.968600273132324
+      ],
+      "hex": "#5d4439",
+      "distribution_pct": {
+        "Technovent Master Colour": 46.96,
+        "Brilliant Yellow": 7.77,
+        "Yellow": 4.85,
+        "Brilliant White": 16.07,
+        "Black": 7.03,
+        "Green": 1.0,
+        "Brilliant Red": 9.29,
+        "Blue": 7.03
+      }
+    },
+    "93": {
+      "index": 93,
+      "lab": [
+        29.87849998474121,
+        3.1257998943328857,
+        7.999300003051758
+      ],
+      "hex": "#50443a",
+      "distribution_pct": {
+        "Technovent Master Colour": 53.13,
+        "Brilliant Yellow": 5.21,
+        "Yellow": 3.12,
+        "Brilliant White": 16.67,
+        "Black": 7.29,
+        "Green": 1.04,
+        "Brilliant Red": 6.25,
+        "Blue": 7.29
+      }
+    },
+    "94": {
+      "index": 94,
+      "lab": [
+        28.448200225830078,
+        4.389200210571289,
+        5.01039981842041
+      ],
+      "hex": "#4d413c",
+      "distribution_pct": {
+        "Technovent Master Colour": 53.13,
+        "Brilliant Yellow": 5.21,
+        "Yellow": 3.12,
+        "Brilliant White": 16.67,
+        "Black": 7.29,
+        "Green": 1.04,
+        "Brilliant Red": 6.25,
+        "Blue": 7.29
+      }
+    },
+    "95": {
+      "index": 95,
+      "lab": [
+        20.0,
+        12.0,
+        12.0
+      ],
+      "hex": "#46291f",
+      "distribution_pct": {
+        "Technovent Master Colour": 45.66,
+        "Brilliant Yellow": 7.98,
+        "Yellow": 4.99,
+        "Brilliant White": 15.95,
+        "Black": 6.98,
+        "Green": 1.0,
+        "Brilliant Red": 10.47,
+        "Blue": 6.98
+      }
+    },
+    "96": {
+      "index": 96,
+      "lab": [
+        15.129599571228027,
+        9.247099876403809,
+        6.5879998207092285
+      ],
+      "hex": "#35211d",
+      "distribution_pct": {
+        "Technovent Master Colour": 50.23,
+        "Brilliant Yellow": 5.13,
+        "Yellow": 3.08,
+        "Brilliant White": 16.43,
+        "Black": 7.19,
+        "Green": 1.03,
+        "Brilliant Red": 9.72,
+        "Blue": 7.19
+      }
+    }
+  }
+}

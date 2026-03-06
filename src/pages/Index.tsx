@@ -1,340 +1,136 @@
-
-import { Suspense, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, useTexture, Text3D, Center } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Scan, Microscope, BarChart, Users } from "lucide-react";
+import { ArrowRight, MapPin, Camera, FileText, BookOpen } from "lucide-react";
 
-// 3D Medical Model Component
-const DNAModel = () => {
-  const group = useRef<any>(null);
-  
-  useFrame((state) => {
-    if (group.current) {
-      group.current.rotation.y = state.clock.getElapsedTime() * 0.1;
-    }
-  });
-  
-  // Create a double helix structure
-  const createHelix = (radius: number, height: number, turns: number, color: string) => {
-    const points = [];
-    const segments = turns * 32;
-    
-    for (let i = 0; i <= segments; i++) {
-      const t = i / segments;
-      const angle = t * Math.PI * 2 * turns;
-      
-      const x = Math.cos(angle) * radius;
-      const y = height * (t - 0.5);
-      const z = Math.sin(angle) * radius;
-      
-      points.push([x, y, z]);
-    }
-    
-    return (
-      <>
-        {points.map((point, i) => (
-          i % 4 === 0 && i < points.length - 1 && (
-            <mesh key={`sphere-${i}`} position={[point[0], point[1], point[2]]}>
-              <sphereGeometry args={[0.2, 16, 16]} />
-              <meshStandardMaterial color={color} />
-            </mesh>
-          )
-        ))}
-        
-        {points.map((point, i) => (
-          i < points.length - 1 && i % 4 === 0 && (
-            <mesh 
-              key={`connector-${i}`}
-              position={[
-                (points[i][0] + points[i+1][0]) / 2,
-                (points[i][1] + points[i+1][1]) / 2,
-                (points[i][2] + points[i+1][2]) / 2
-              ]}
-              rotation={[
-                Math.atan2(
-                  Math.sqrt(
-                    Math.pow(points[i+1][0] - points[i][0], 2) + 
-                    Math.pow(points[i+1][2] - points[i][2], 2)
-                  ),
-                  points[i+1][1] - points[i][1]
-                ),
-                0,
-                Math.atan2(
-                  points[i+1][0] - points[i][0],
-                  points[i+1][2] - points[i][2]
-                )
-              ]}
-            >
-              <cylinderGeometry 
-                args={[
-                  0.05, 0.05, 
-                  Math.sqrt(
-                    Math.pow(points[i][0] - points[i+1][0], 2) + 
-                    Math.pow(points[i][1] - points[i+1][1], 2) + 
-                    Math.pow(points[i][2] - points[i+1][2], 2)
-                  ),
-                  8, 1
-                ]}
-              />
-              <meshStandardMaterial color={color} />
-            </mesh>
-          )
-        ))}
-      </>
-    );
-  };
-  
-  return (
-    <group ref={group}>
-      {/* First DNA strand */}
-      {createHelix(3, 10, 2, "#9b87f5")}
-      
-      {/* Second DNA strand (offset by 180 degrees) */}
-      {createHelix(3, 10, 2, "#F97316")}
-      
-      {/* Base pairs connecting the two strands */}
-      {Array.from({ length: 16 }).map((_, i) => {
-        const t = i / 15;
-        const angle1 = t * Math.PI * 2 * 2;
-        const angle2 = angle1 + Math.PI;
-        
-        const x1 = Math.cos(angle1) * 3;
-        const y1 = 10 * (t - 0.5);
-        const z1 = Math.sin(angle1) * 3;
-        
-        const x2 = Math.cos(angle2) * 3;
-        const y2 = y1;
-        const z2 = Math.sin(angle2) * 3;
-        
-        return (
-          <mesh 
-            key={`base-${i}`}
-            position={[
-              (x1 + x2) / 2,
-              y1,
-              (z1 + z2) / 2
-            ]}
-            rotation={[
-              Math.PI/2,
-              0,
-              Math.atan2(
-                x2 - x1,
-                z2 - z1
-              )
-            ]}
-          >
-            <cylinderGeometry 
-              args={[
-                0.05, 0.05, 
-                Math.sqrt(
-                  Math.pow(x1 - x2, 2) + 
-                  Math.pow(z1 - z2, 2)
-                ),
-                8, 1
-              ]}
-            />
-            <meshStandardMaterial color="#33C3F0" />
-          </mesh>
-        );
-      })}
-    </group>
-  );
-};
-
-// 3D Logo Component
-const EpiToneLogo = () => {
-  return (
-    <Center position={[0, -2, 0]}>
-      <Text3D
-        font="/fonts/inter_regular.json"
-        size={1.5}
-        height={0.2}
-        curveSegments={12}
-      >
-        {`EpiTone`}
-        <meshStandardMaterial color="#9b87f5" />
-      </Text3D>
-    </Center>
-  );
-};
-
-// Skin Layer Component
-const SkinLayer = () => {
-  const texture = useTexture('/placeholder.svg');
-  
-  return (
-    <mesh position={[0, 0, -5]} rotation={[0, 0, 0]}>
-      <planeGeometry args={[10, 6]} />
-      <meshStandardMaterial map={texture} transparent opacity={0.3} />
-    </mesh>
-  );
-};
-
-// Main 3D Scene
-const Scene = () => {
-  return (
-    <Canvas style={{ height: '70vh' }}>
-      <PerspectiveCamera makeDefault position={[0, 0, 15]} />
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} />
-      
-      <Suspense fallback={null}>
-        <DNAModel />
-        <EpiToneLogo />
-        <SkinLayer />
-      </Suspense>
-      
-      <OrbitControls 
-        enableZoom={false}
-        enablePan={false}
-        autoRotate
-        autoRotateSpeed={0.5}
-        minPolarAngle={Math.PI / 3}
-        maxPolarAngle={Math.PI / 1.5}
-      />
-    </Canvas>
-  );
-};
-
-// Main Page Component
 const Index = () => {
   const features = [
     {
-      icon: <Scan className="h-10 w-10 text-epitone-purple mb-2" />,
-      title: "Advanced Skin Tone Analysis",
-      description: "Utilize cutting-edge AI technology to accurately analyze and identify your skin tone."
+      icon: <MapPin className="h-8 w-8 text-primary" />,
+      title: "India Demographic Map",
+      description: "Explore state-wise melanin index and Fitzpatrick type data across India's diverse population.",
+      link: "/dashboard",
     },
     {
-      icon: <Microscope className="h-10 w-10 text-epitone-orange mb-2" />,
-      title: "Precision Face Detection",
-      description: "Our facial recognition system ensures accurate mapping for consistent results."
+      icon: <Camera className="h-8 w-8 text-accent" />,
+      title: "Skin Tone Analysis",
+      description: "Capture or upload patient images for AI-powered melanin classification and recipe formulation.",
+      link: "/analysis",
     },
     {
-      icon: <BarChart className="h-10 w-10 text-epitone-blue mb-2" />,
-      title: "Comprehensive Reports",
-      description: "Receive detailed reports with personalized skincare recommendations."
+      icon: <FileText className="h-8 w-8 text-primary" />,
+      title: "Patient Records",
+      description: "Manage patient history, matched shades, and prosthetic recipes in a searchable database.",
+      link: "/records",
     },
     {
-      icon: <Users className="h-10 w-10 text-epitone-purple mb-2" />,
-      title: "Expert Support",
-      description: "Access to dermatologists and skincare professionals for personalized guidance."
-    }
+      icon: <BookOpen className="h-8 w-8 text-accent" />,
+      title: "Knowledge Hub",
+      description: "Research articles on Fitzpatrick Scale, AI in prosthetics, and Indian demographic insights.",
+      link: "/learn",
+    },
   ];
-  
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-epitone-softPurple to-white">
-        <div className="container mx-auto px-4 pt-16 pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-ic-cream via-background to-ic-warm">
+        <div className="container mx-auto px-4 py-20 lg:py-28">
+          <div className="max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-left"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
             >
-              <h1 className="text-5xl font-bold text-epitone-darkPurple mb-4">
-                Advanced <span className="text-epitone-purple">Skin Tone</span> Analysis Technology
+              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider mb-6">
+                For Indian Clinicians
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-tight mb-6">
+                Precision Color Matching for{" "}
+                <span className="text-primary">Facial Prosthetics</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
-                EpiTone combines AI and medical expertise to provide accurate skin analysis, personalized recommendations, and comprehensive health reports.
+              <p className="text-lg text-muted-foreground mb-8 max-w-2xl font-body">
+                IndraChavi helps maxillofacial surgeons and prosthodontists across India formulate
+                exact pigment recipes for custom prostheses — using AI-powered skin tone analysis
+                and a 98-swatch color palette.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button className="bg-epitone-purple hover:bg-epitone-purple/80 text-lg px-6 py-6" asChild>
-                  <Link to="/diagnose">
-                    Start Analysis <ArrowRight className="ml-2 h-5 w-5" />
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button size="lg" asChild>
+                  <Link to="/analysis">
+                    Start Analysis <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" className="border-epitone-purple text-epitone-purple hover:bg-epitone-softPurple/50 text-lg px-6 py-6" asChild>
-                  <Link to="/learn">
-                    Learn More
+                <Button size="lg" variant="outline" asChild>
+                  <Link to="/dashboard">
+                    View India Map
                   </Link>
                 </Button>
-              </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="lg:col-span-1"
-            >
-              <div className="rounded-xl overflow-hidden shadow-xl bg-white/30 backdrop-blur-sm">
-                <Scene />
               </div>
             </motion.div>
           </div>
         </div>
-        
-        {/* Wave SVG */}
-        <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0L48 8.3C96 16.7 192 33.3 288 33.3C384 33.3 480 16.7 576 16.7C672 16.7 768 33.3 864 41.7C960 50 1056 50 1152 41.7C1248 33.3 1344 16.7 1392 8.3L1440 0V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="white"/>
-        </svg>
+        {/* Decorative swatch strip */}
+        <div className="absolute bottom-0 left-0 right-0 h-2 flex">
+          {["#e4e2e0","#cfcbc6","#ccbfaf","#cfb79c","#c5b0a1","#c5a899","#bea995","#ce9f81","#bea27f","#c59d8c","#b0946e","#a08264","#8b6e52","#755a42","#604a36","#503c2c"].map((c,i)=>(
+            <div key={i} className="flex-1" style={{ backgroundColor: c }} />
+          ))}
+        </div>
       </section>
-      
-      {/* Features Section */}
+
+      {/* Features */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-14"
           >
-            <h2 className="text-3xl font-bold text-epitone-darkPurple mb-4">
-              Advanced Features for Complete Skin Analysis
+            <h2 className="text-3xl font-display font-bold text-foreground mb-3">
+              Clinical Tools, Simplified
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              EpiTone provides comprehensive tools to analyze, track, and improve your skin health with medical-grade precision.
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Everything a doctor needs for facial prosthetic color matching — from demographic insights to recipe generation.
             </p>
           </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, i) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((f, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * i }}
-                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-epitone-softPurple/50 text-center"
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
               >
-                <div className="mb-4 flex justify-center">{feature.icon}</div>
-                <h3 className="text-xl font-bold text-epitone-darkPurple mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <Link
+                  to={f.link}
+                  className="block p-6 rounded-xl border border-border bg-card hover:shadow-md hover:border-primary/30 transition-all h-full"
+                >
+                  <div className="mb-4">{f.icon}</div>
+                  <h3 className="text-lg font-display font-semibold text-foreground mb-2">{f.title}</h3>
+                  <p className="text-sm text-muted-foreground">{f.description}</p>
+                </Link>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      
-      {/* CTA Section */}
-      <section className="bg-gradient-to-r from-epitone-softPurple to-epitone-softPeach py-20">
+
+      {/* CTA */}
+      <section className="bg-primary/5 py-16">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-3xl font-bold text-epitone-darkPurple mb-6">
-              Ready to Discover Your Skin's Unique Profile?
-            </h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Join thousands of users who have benefited from EpiTone's advanced skin analysis technology.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-epitone-purple hover:bg-epitone-purple/80 text-lg px-8 py-6"
-              asChild
-            >
-              <Link to="/signup">
-                Create Free Account <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
+          <h2 className="text-2xl font-display font-bold text-foreground mb-4">
+            Ready to Improve Prosthetic Outcomes?
+          </h2>
+          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+            Join clinicians across India who use IndraChavi for precise, reproducible prosthetic color formulation.
+          </p>
+          <Button size="lg" asChild>
+            <Link to="/signup">
+              Create Free Account <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>
