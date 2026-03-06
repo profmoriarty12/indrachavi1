@@ -8,13 +8,13 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import LoadingScreen from "./components/common/LoadingScreen";
 
-// Lazy loaded pages for better performance
 const Home = lazy(() => import("./pages/Index"));
-const DiagnoseScreen = lazy(() => import("./pages/DiagnoseScreen"));
+const DashboardPage = lazy(() => import("./pages/DashboardPage"));
+const AnalysisPage = lazy(() => import("./pages/AnalysisPage"));
+const RecordsPage = lazy(() => import("./pages/RecordsPage"));
 const Login = lazy(() => import("./pages/Login"));
 const Signup = lazy(() => import("./pages/Signup"));
 const LearnPage = lazy(() => import("./pages/LearnPage"));
-const ReportPage = lazy(() => import("./pages/ReportPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const RatePage = lazy(() => import("./pages/RatePage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -28,15 +28,16 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navbar />
-        <main className="min-h-screen pt-16"> {/* Add padding-top for fixed navbar */}
+        <main className="min-h-screen pt-16">
           <Suspense fallback={<LoadingScreen />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/diagnose" element={<DiagnoseScreen />} />
+              <Route path="/dashboard" element={<DashboardPage />} />
+              <Route path="/analysis" element={<AnalysisPage />} />
+              <Route path="/records" element={<RecordsPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/learn" element={<LearnPage />} />
-              <Route path="/reports" element={<ReportPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/rate" element={<RatePage />} />
               <Route path="*" element={<NotFound />} />

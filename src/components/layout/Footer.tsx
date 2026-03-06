@@ -1,117 +1,76 @@
-
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-epitone-darkPurple text-white">
+    <footer className="bg-ic-clay text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Epi<span className="text-epitone-purple">Tone</span>
+            <h3 className="text-xl font-display font-bold mb-4">
+              Indra<span className="text-ic-saffron">Chavi</span>
             </h3>
-            <p className="mb-4 text-gray-300">
-              Advanced skin tone analysis and detection for better healthcare and personalized treatment recommendations.
+            <p className="mb-4 text-white/70 text-sm">
+              AI-powered prosthetic color matching for facial rehabilitation across India. Precision formulation meets clinical care.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                  Home
-                </Link>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/dashboard", label: "Dashboard" },
+                { to: "/analysis", label: "Analysis" },
+                { to: "/records", label: "Records" },
+                { to: "/learn", label: "Learn" },
+              ].map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-white/70 hover:text-ic-saffron transition-colors">{l.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Partner Labs</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex gap-2">
+                <MapPin className="h-4 w-4 shrink-0 text-ic-saffron mt-0.5" />
+                <span className="text-white/70">AIIMS, Ansari Nagar, New Delhi 110029</span>
               </li>
-              <li>
-                <Link to="/diagnose" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                  Diagnose
-                </Link>
+              <li className="flex gap-2">
+                <MapPin className="h-4 w-4 shrink-0 text-ic-saffron mt-0.5" />
+                <span className="text-white/70">KEM Hospital, Parel, Mumbai 400012</span>
               </li>
-              <li>
-                <Link to="/learn" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                  Learn
-                </Link>
-              </li>
-              <li>
-                <Link to="/reports" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                  Reports
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-300 hover:text-epitone-purple transition-colors">
-                  Contact
-                </Link>
+              <li className="flex gap-2">
+                <MapPin className="h-4 w-4 shrink-0 text-ic-saffron mt-0.5" />
+                <span className="text-white/70">CMC, Vellore, Tamil Nadu 632004</span>
               </li>
             </ul>
           </div>
 
-          {/* Laboratory Addresses */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Our Laboratories</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <MapPin className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">123 Medical Center Dr, Boston, MA 02115</span>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Contact</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-ic-saffron" />
+                <span className="text-white/70">+91 11 2658 8500</span>
               </li>
-              <li className="flex">
-                <MapPin className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">456 Health Science Blvd, San Francisco, CA 94143</span>
+              <li className="flex gap-2">
+                <Mail className="h-4 w-4 shrink-0 text-ic-saffron" />
+                <span className="text-white/70">research@indrachavi.in</span>
               </li>
-              <li className="flex">
-                <MapPin className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">789 Research Parkway, Houston, TX 77030</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex">
-                <Phone className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">+1 (800) 123-4567</span>
-              </li>
-              <li className="flex">
-                <Mail className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">contact@epitone-health.com</span>
-              </li>
-              <li className="flex">
-                <Mail className="mr-2 h-5 w-5 shrink-0 text-epitone-purple" />
-                <span className="text-gray-300">support@epitone-health.com</span>
+              <li className="flex gap-2">
+                <Mail className="h-4 w-4 shrink-0 text-ic-saffron" />
+                <span className="text-white/70">support@indrachavi.in</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} EpiTone Health Technologies. All rights reserved.</p>
-          <div className="mt-2 flex justify-center space-x-4">
-            <Link to="/privacy" className="hover:text-epitone-purple transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-epitone-purple transition-colors">
-              Terms of Service
-            </Link>
-          </div>
+        <div className="border-t border-white/10 mt-10 pt-6 text-center text-white/50 text-xs">
+          <p>&copy; {new Date().getFullYear()} IndraChavi — Facial Prosthetic Research Initiative. All rights reserved.</p>
         </div>
       </div>
     </footer>
