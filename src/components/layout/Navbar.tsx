@@ -1,24 +1,28 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-
-const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/dashboard", label: "Dashboard" },
-  { to: "/analysis", label: "Analysis" },
-  { to: "/records", label: "Records" },
-  { to: "/learn", label: "Learn" },
-  { to: "/contact", label: "Contact" },
-  { to: "/rate", label: "Rate Us" },
-];
+import { useI18n } from "@/lib/i18n";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { lang, setLang, t } = useI18n();
+
+  const navLinks = [
+    { to: "/", label: t("Home") },
+    { to: "/dashboard", label: t("Dashboard") },
+    { to: "/analysis", label: t("Analysis") },
+    { to: "/records", label: t("Records") },
+    { to: "/learn", label: t("Learn") },
+    { to: "/contact", label: t("Contact") },
+    { to: "/rate", label: t("Rate Us") },
+  ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  const toggleLang = () => setLang(lang === "en" ? "hi" : "en");
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
@@ -50,20 +54,37 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-2">
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLang}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold border border-border hover:bg-muted transition-colors"
+              title="Toggle language"
+            >
+              <Globe className="h-3.5 w-3.5" />
+              {lang === "en" ? "हिन्दी" : "English"}
+            </button>
             <Link to="/login">
-              <Button variant="ghost" size="sm">Login</Button>
+              <Button variant="ghost" size="sm">{t("Login")}</Button>
             </Link>
             <Link to="/signup">
-              <Button size="sm">Sign Up</Button>
+              <Button size="sm">{t("Sign Up")}</Button>
             </Link>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md text-foreground hover:bg-muted"
-          >
-            {isOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              onClick={toggleLang}
+              className="p-2 rounded-md text-xs font-semibold border border-border hover:bg-muted"
+            >
+              {lang === "en" ? "हि" : "En"}
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md text-foreground hover:bg-muted"
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -90,10 +111,10 @@ const Navbar = () => {
               ))}
               <div className="flex gap-2 pt-3 border-t border-border mt-2">
                 <Link to="/login" className="flex-1" onClick={() => setIsOpen(false)}>
-                  <Button variant="outline" className="w-full" size="sm">Login</Button>
+                  <Button variant="outline" className="w-full" size="sm">{t("Login")}</Button>
                 </Link>
                 <Link to="/signup" className="flex-1" onClick={() => setIsOpen(false)}>
-                  <Button className="w-full" size="sm">Sign Up</Button>
+                  <Button className="w-full" size="sm">{t("Sign Up")}</Button>
                 </Link>
               </div>
             </div>
