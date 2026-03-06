@@ -1,15 +1,14 @@
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { stateData, getMelaninColor, type StateData } from "@/data/indiaStates";
 import { Info } from "lucide-react";
-import { ComposableMap, Geographies, Geography, ZoomableGroup } from "react-simple-maps";
+import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import { useI18n } from "@/lib/i18n";
 
-const INDIA_TOPO_URL = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
-const INDIA_STATES_TOPO = "https://gist.githubusercontent.com/jbrobst/56c13bbbf9d97d187fea01ca62ea5112/raw/e388c4cae20aa53cb5090210a42ebb9b765c0a36/india_states.json";
+const INDIA_TOPO_URL = "/india_states.json";
 
-// Map state names from TopoJSON to our data
+// Map st_nm values from TopoJSON to our state abbreviations
 const stateNameMap: Record<string, string> = {
   "Jammu & Kashmir": "JK",
   "Himachal Pradesh": "HP",
@@ -46,6 +45,7 @@ const stateNameMap: Record<string, string> = {
   "Chandigarh": "PB",
   "Dadra and Nagar Haveli and Daman and Diu": "GJ",
   "Lakshadweep": "KL",
+  "Andaman & Nicobar Island": "TN",
   "Andaman and Nicobar Islands": "TN",
 };
 
@@ -70,7 +70,7 @@ const DashboardPage = () => {
           {t("India Demographic Dashboard")}
         </h1>
         <p className="text-muted-foreground">
-          State-wise Melanin Index & Fitzpatrick Type distribution for prosthetic formulation reference.
+          {t("dashboard_subtitle")}
         </p>
       </motion.div>
 
@@ -79,7 +79,7 @@ const DashboardPage = () => {
         <div className="lg:col-span-2">
           <Card>
             <CardHeader className="pb-3">
-              <CardTitle className="text-lg font-display">State-wise Melanin Index Map</CardTitle>
+              <CardTitle className="text-lg font-display">{t("State-wise Melanin Index Map")}</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="relative" onMouseMove={handleMouseMove}>
@@ -90,10 +90,10 @@ const DashboardPage = () => {
                   height={680}
                   style={{ width: "100%", height: "auto" }}
                 >
-                  <Geographies geography={INDIA_STATES_TOPO}>
+                  <Geographies geography={INDIA_TOPO_URL}>
                     {({ geographies }) =>
                       geographies.map((geo) => {
-                        const geoName = geo.properties.ST_NM;
+                        const geoName = geo.properties.st_nm || geo.properties.ST_NM;
                         const abbr = stateNameMap[geoName];
                         const state = abbr ? stateDataMap.get(abbr) : null;
                         const fillColor = state ? getMelaninColor(state.melaninIndex) : "hsl(30, 15%, 90%)";
@@ -142,22 +142,22 @@ const DashboardPage = () => {
                       />
                       <span className="text-xs text-muted-foreground">MI: {hoveredState.melaninIndex}</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mt-1">Fitzpatrick: {hoveredState.fitzpatrickType}</p>
-                    <p className="text-xs text-muted-foreground">Category: {hoveredState.toneCategory}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{t("Fitzpatrick")}: {hoveredState.fitzpatrickType}</p>
+                    <p className="text-xs text-muted-foreground">{t("Category")}: {hoveredState.toneCategory}</p>
                   </div>
                 )}
               </div>
 
               {/* Legend */}
               <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
-                <span>Low MI</span>
+                <span>{t("Low MI")}</span>
                 <div
                   className="flex-1 h-3 rounded-full"
                   style={{
                     background: `linear-gradient(to right, ${getMelaninColor(27)}, ${getMelaninColor(40)}, ${getMelaninColor(53)})`,
                   }}
                 />
-                <span>High MI</span>
+                <span>{t("High MI")}</span>
               </div>
             </CardContent>
           </Card>
@@ -184,15 +184,15 @@ const DashboardPage = () => {
                     </h3>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between py-2 border-b border-border">
-                        <span className="text-muted-foreground">Mean Melanin Index</span>
+                        <span className="text-muted-foreground">{t("Mean Melanin Index")}</span>
                         <span className="font-semibold text-foreground">{displayState.melaninIndex}</span>
                       </div>
                       <div className="flex justify-between py-2 border-b border-border">
-                        <span className="text-muted-foreground">Fitzpatrick Type</span>
+                        <span className="text-muted-foreground">{t("Fitzpatrick Type")}</span>
                         <span className="font-semibold text-foreground">{displayState.fitzpatrickType}</span>
                       </div>
                       <div className="flex justify-between py-2">
-                        <span className="text-muted-foreground">Tone Category</span>
+                        <span className="text-muted-foreground">{t("Tone Category")}</span>
                         <span className="font-semibold text-foreground">{displayState.toneCategory}</span>
                       </div>
                     </div>
@@ -205,7 +205,7 @@ const DashboardPage = () => {
                   <CardContent className="pt-6 text-center">
                     <Info className="h-10 w-10 text-muted-foreground mx-auto mb-3" />
                     <p className="text-sm text-muted-foreground">
-                      Click or hover over a state on the map to view demographic skin tone data.
+                      {t("map_hint")}
                     </p>
                   </CardContent>
                 </Card>
@@ -218,25 +218,25 @@ const DashboardPage = () => {
             <Card>
               <CardContent className="pt-4 text-center">
                 <p className="text-2xl font-bold text-primary">30</p>
-                <p className="text-xs text-muted-foreground">States/UTs</p>
+                <p className="text-xs text-muted-foreground">{t("States/UTs")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-4 text-center">
                 <p className="text-2xl font-bold text-accent">II-VI</p>
-                <p className="text-xs text-muted-foreground">Fitzpatrick Range</p>
+                <p className="text-xs text-muted-foreground">{t("Fitzpatrick Range")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-4 text-center">
                 <p className="text-2xl font-bold text-primary">27.5</p>
-                <p className="text-xs text-muted-foreground">Min MI (J&K)</p>
+                <p className="text-xs text-muted-foreground">{t("Min MI (J&K)")}</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="pt-4 text-center">
                 <p className="text-2xl font-bold text-foreground">52.8</p>
-                <p className="text-xs text-muted-foreground">Max MI (TN)</p>
+                <p className="text-xs text-muted-foreground">{t("Max MI (TN)")}</p>
               </CardContent>
             </Card>
           </div>

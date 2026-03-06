@@ -8,8 +8,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { stateData } from "@/data/indiaStates";
 import ClassificationReport from "@/components/ClassificationReport";
+import { useI18n } from "@/lib/i18n";
 
 const AnalysisPage = () => {
+  const { t } = useI18n();
   const [patientId, setPatientId] = useState("");
   const [patientName, setPatientName] = useState("");
   const [patientAge, setPatientAge] = useState("");
@@ -93,37 +95,36 @@ const AnalysisPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <h1 className="text-3xl font-display font-bold text-foreground mb-2">New Patient Analysis</h1>
-        <p className="text-muted-foreground">Capture or upload a skin image to generate a prosthetic color recipe.</p>
+        <h1 className="text-3xl font-display font-bold text-foreground mb-2">{t("New Patient Analysis")}</h1>
+        <p className="text-muted-foreground">{t("analysis_subtitle")}</p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {/* Patient Info */}
         <Card>
           <CardHeader>
             <CardTitle className="text-lg font-display flex items-center gap-2">
-              <User className="h-5 w-5 text-primary" /> Patient Details
+              <User className="h-5 w-5 text-primary" /> {t("Patient Details")}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="pid">Patient ID</Label>
+                <Label htmlFor="pid">{t("Patient ID")}</Label>
                 <Input id="pid" placeholder="IC-001" value={patientId} onChange={(e) => setPatientId(e.target.value)} />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="age">Age</Label>
+                <Label htmlFor="age">{t("Age")}</Label>
                 <Input id="age" type="number" placeholder="30" value={patientAge} onChange={(e) => setPatientAge(e.target.value)} />
               </div>
             </div>
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
-              <Input id="name" placeholder="Patient name" value={patientName} onChange={(e) => setPatientName(e.target.value)} />
+              <Label htmlFor="name">{t("Full Name")}</Label>
+              <Input id="name" placeholder={t("Patient name")} value={patientName} onChange={(e) => setPatientName(e.target.value)} />
             </div>
             <div className="space-y-2">
-              <Label>State</Label>
+              <Label>{t("State")}</Label>
               <Select value={patientState} onValueChange={setPatientState}>
-                <SelectTrigger><SelectValue placeholder="Select state" /></SelectTrigger>
+                <SelectTrigger><SelectValue placeholder={t("Select state")} /></SelectTrigger>
                 <SelectContent>
                   {stateData.map((s) => (
                     <SelectItem key={s.abbr} value={s.abbr}>{s.name}</SelectItem>
@@ -134,11 +135,10 @@ const AnalysisPage = () => {
           </CardContent>
         </Card>
 
-        {/* Image Capture */}
         <Card>
           <CardHeader>
             <CardTitle className="text-lg font-display flex items-center gap-2">
-              <Camera className="h-5 w-5 text-primary" /> Image Capture
+              <Camera className="h-5 w-5 text-primary" /> {t("Image Capture")}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -149,29 +149,28 @@ const AnalysisPage = () => {
                   className="w-full border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-primary/50 hover:bg-muted/50 transition-colors"
                 >
                   <Upload className="h-10 w-10 text-muted-foreground mx-auto mb-3" />
-                  <p className="font-medium text-foreground">Upload Image</p>
-                  <p className="text-xs text-muted-foreground mt-1">JPG, PNG up to 10MB</p>
+                  <p className="font-medium text-foreground">{t("Upload Image")}</p>
+                  <p className="text-xs text-muted-foreground mt-1">{t("upload_hint")}</p>
                   <input ref={fileInputRef} type="file" accept="image/jpeg,image/png" className="hidden" onChange={handleFileChange} />
                 </button>
                 <Button onClick={startCamera} variant="outline" className="w-full" size="lg">
-                  <Camera className="mr-2 h-5 w-5" /> Open Camera
+                  <Camera className="mr-2 h-5 w-5" /> {t("Open Camera")}
                 </Button>
               </div>
             ) : isCameraActive ? (
               <div className="space-y-4">
                 <div className="relative rounded-lg overflow-hidden bg-black aspect-[4/3]">
                   <video ref={videoRef} autoPlay playsInline className="w-full h-full object-cover" />
-                  {/* Face guide overlay */}
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="w-48 h-60 border-2 border-white/50 rounded-[50%] animate-pulse-gentle" />
                   </div>
                   <div className="absolute top-3 left-3 bg-black/60 text-white text-xs px-2 py-1 rounded">
-                    Align face within the oval
+                    {t("align_face")}
                   </div>
                 </div>
                 <div className="flex gap-3">
                   <Button onClick={captureImage} className="flex-1" size="lg">
-                    <Camera className="mr-2 h-5 w-5" /> Capture
+                    <Camera className="mr-2 h-5 w-5" /> {t("Capture")}
                   </Button>
                   <Button
                     onClick={() => {
@@ -181,7 +180,7 @@ const AnalysisPage = () => {
                     }}
                     variant="outline"
                   >
-                    Cancel
+                    {t("Cancel")}
                   </Button>
                 </div>
               </div>
@@ -191,13 +190,13 @@ const AnalysisPage = () => {
                 <div className="flex gap-3">
                   <Button onClick={handleAnalyze} className="flex-1" size="lg" disabled={isAnalyzing}>
                     {isAnalyzing ? (
-                      <><Activity className="mr-2 h-5 w-5 animate-pulse" /> Analyzing…</>
+                      <><Activity className="mr-2 h-5 w-5 animate-pulse" /> {t("Analyzing")}</>
                     ) : (
-                      "Analyze & Generate Recipe"
+                      t("Analyze & Generate Recipe")
                     )}
                   </Button>
                   <Button variant="outline" onClick={() => setSelectedImage(null)}>
-                    Retake
+                    {t("Retake")}
                   </Button>
                 </div>
               </div>

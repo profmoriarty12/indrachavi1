@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import { Search, Eye, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
 } from "@/components/ui/table";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import swatchData from "@/data/swatches.json";
 import ClassificationReport from "@/components/ClassificationReport";
+import { useI18n } from "@/lib/i18n";
 
 const swatches = Object.values((swatchData as any).swatches) as any[];
 
@@ -22,6 +22,7 @@ const dummyRecords = [
 ];
 
 const RecordsPage = () => {
+  const { t } = useI18n();
   const [search, setSearch] = useState("");
   const [viewReport, setViewReport] = useState<typeof dummyRecords[0] | null>(null);
 
@@ -52,8 +53,8 @@ const RecordsPage = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <h1 className="text-3xl font-display font-bold text-foreground mb-2">Patient Records</h1>
-        <p className="text-muted-foreground">Search and manage past patient analyses and reports.</p>
+        <h1 className="text-3xl font-display font-bold text-foreground mb-2">{t("Patient Records")}</h1>
+        <p className="text-muted-foreground">{t("records_subtitle")}</p>
       </motion.div>
 
       <Card>
@@ -62,7 +63,7 @@ const RecordsPage = () => {
             <div className="relative flex-1 max-w-sm">
               <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search by name, ID, or state…"
+                placeholder={t("Search")}
                 className="pl-9"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
@@ -75,11 +76,11 @@ const RecordsPage = () => {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="w-24">Patient ID</TableHead>
-                  <TableHead>Date</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead className="w-28">Matched Shade</TableHead>
-                  <TableHead className="text-right w-28">Action</TableHead>
+                  <TableHead className="w-24">{t("Patient ID")}</TableHead>
+                  <TableHead>{t("Date")}</TableHead>
+                  <TableHead>{t("Name")}</TableHead>
+                  <TableHead className="w-28">{t("Matched Shade")}</TableHead>
+                  <TableHead className="text-right w-28">{t("Action")}</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -101,7 +102,7 @@ const RecordsPage = () => {
                       </TableCell>
                       <TableCell className="text-right">
                         <Button size="sm" variant="outline" onClick={() => setViewReport(r)}>
-                          <Eye className="h-4 w-4 mr-1" /> View
+                          <Eye className="h-4 w-4 mr-1" /> {t("View")}
                         </Button>
                       </TableCell>
                     </TableRow>
@@ -111,7 +112,7 @@ const RecordsPage = () => {
                   <TableRow>
                     <TableCell colSpan={5} className="text-center py-8">
                       <FileText className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">No records found.</p>
+                      <p className="text-sm text-muted-foreground">{t("No records found")}</p>
                     </TableCell>
                   </TableRow>
                 )}

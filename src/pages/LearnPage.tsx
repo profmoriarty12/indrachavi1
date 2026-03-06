@@ -72,43 +72,42 @@ Multimodal Context Fusion: The vision data is simultaneously processed alongside
   },
 ];
 
-const resources = [
-  {
-    icon: <FlaskConical className="h-7 w-7 text-primary" />,
-    title: "Melanin Index Reference",
-    description: "State-wise spectrophotometric melanin data for prosthetic shade matching.",
-  },
-  {
-    icon: <Brain className="h-7 w-7 text-accent" />,
-    title: "AI Classification Model",
-    description: "Technical documentation on the swatch classification neural network.",
-  },
-  {
-    icon: <Users className="h-7 w-7 text-primary" />,
-    title: "Clinical Guidelines",
-    description: "Best practices for image capture, patient consent, and prosthetic fitting.",
-  },
-  {
-    icon: <BookOpen className="h-7 w-7 text-accent" />,
-    title: "Pigment Mixing Guide",
-    description: "Technovent silicone pigment ratios and mixing instructions.",
-  },
-];
-
 const LearnPage = () => {
   const { t } = useI18n();
   const [selectedArticle, setSelectedArticle] = useState<typeof articles[0] | null>(null);
+
+  const resources = [
+    {
+      icon: <FlaskConical className="h-7 w-7 text-primary" />,
+      title: t("Melanin Index Reference"),
+      description: t("melanin_ref_desc"),
+    },
+    {
+      icon: <Brain className="h-7 w-7 text-accent" />,
+      title: t("AI Classification Model"),
+      description: t("ai_model_desc"),
+    },
+    {
+      icon: <Users className="h-7 w-7 text-primary" />,
+      title: t("Clinical Guidelines"),
+      description: t("clinical_guide_desc"),
+    },
+    {
+      icon: <BookOpen className="h-7 w-7 text-accent" />,
+      title: t("Pigment Mixing Guide"),
+      description: t("pigment_guide_desc"),
+    },
+  ];
 
   return (
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
         <h1 className="text-3xl font-display font-bold text-foreground mb-2">{t("Knowledge Hub")}</h1>
         <p className="text-muted-foreground max-w-2xl">
-          Resources, research, and tutorials on facial prosthetic color science and Indian demographic skin tone data.
+          {t("learn_subtitle")}
         </p>
       </motion.div>
 
-      {/* Resources Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
         {resources.map((r, i) => (
           <motion.div
@@ -129,8 +128,7 @@ const LearnPage = () => {
         ))}
       </div>
 
-      {/* Articles */}
-      <h2 className="text-2xl font-display font-bold text-foreground mb-6">Featured Articles</h2>
+      <h2 className="text-2xl font-display font-bold text-foreground mb-6">{t("Featured Articles")}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
         {articles.map((a, i) => (
           <motion.div
@@ -168,7 +166,6 @@ const LearnPage = () => {
         ))}
       </div>
 
-      {/* Article Modal */}
       <AnimatePresence>
         {selectedArticle && (
           <motion.div
