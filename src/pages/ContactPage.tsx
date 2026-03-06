@@ -40,7 +40,7 @@ const ContactPage = () => {
     <div className="container mx-auto px-4 py-8">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
         <h1 className="text-3xl font-display font-bold text-foreground mb-2">{t("Contact")}</h1>
-        <p className="text-muted-foreground">Reach out for partnerships, clinical inquiries, or technical support.</p>
+        <p className="text-muted-foreground">{t("contact_subtitle")}</p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto mb-14">
@@ -51,20 +51,20 @@ const ContactPage = () => {
                 <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-3">
                   <Check className="h-6 w-6 text-accent" />
                 </div>
-                <h3 className="font-display font-semibold text-foreground mb-1">Message Sent</h3>
-                <p className="text-sm text-muted-foreground">We'll respond within 24 hours.</p>
-                <Button variant="outline" className="mt-4" onClick={() => setIsSubmitted(false)}>Send Another</Button>
+                <h3 className="font-display font-semibold text-foreground mb-1">{t("Message Sent")}</h3>
+                <p className="text-sm text-muted-foreground">{t("response_time")}</p>
+                <Button variant="outline" className="mt-4" onClick={() => setIsSubmitted(false)}>{t("Send Another")}</Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-2"><Label>Name</Label><Input placeholder="Dr. Name" required /></div>
-                  <div className="space-y-2"><Label>Email</Label><Input type="email" placeholder="doctor@hospital.in" required /></div>
+                  <div className="space-y-2"><Label>{t("Name")}</Label><Input placeholder="Dr. Name" required /></div>
+                  <div className="space-y-2"><Label>{t("Email")}</Label><Input type="email" placeholder="doctor@hospital.in" required /></div>
                 </div>
-                <div className="space-y-2"><Label>Subject</Label><Input placeholder="Inquiry about…" required /></div>
-                <div className="space-y-2"><Label>Message</Label><Textarea rows={5} placeholder="Your message…" required /></div>
+                <div className="space-y-2"><Label>{t("Subject")}</Label><Input placeholder="Inquiry about…" required /></div>
+                <div className="space-y-2"><Label>{t("Message")}</Label><Textarea rows={5} placeholder="Your message…" required /></div>
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? "Sending…" : <><Send className="mr-2 h-4 w-4" /> Send Message</>}
+                  {isSubmitting ? t("Sending") : <><Send className="mr-2 h-4 w-4" /> {t("Send Message")}</>}
                 </Button>
               </form>
             )}
@@ -73,7 +73,7 @@ const ContactPage = () => {
 
         <div className="space-y-4">
           <div className="bg-primary/5 rounded-lg p-5">
-            <h3 className="font-display font-semibold text-foreground mb-3">Get in Touch</h3>
+            <h3 className="font-display font-semibold text-foreground mb-3">{t("Get in Touch")}</h3>
             <div className="space-y-3 text-sm">
               <div className="flex gap-2"><Mail className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">research@indrachavi.in</span></div>
               <div className="flex gap-2"><Phone className="h-4 w-4 text-primary mt-0.5" /><span className="text-muted-foreground">+91 172 275 6565</span></div>
@@ -81,7 +81,7 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <h3 className="font-display font-semibold text-foreground pt-2">Institutional Partners</h3>
+          <h3 className="font-display font-semibold text-foreground pt-2">{t("Institutional Partners")}</h3>
           {partners.map((l, i) => (
             <Card key={i}>
               <CardContent className="pt-4 text-sm space-y-2">

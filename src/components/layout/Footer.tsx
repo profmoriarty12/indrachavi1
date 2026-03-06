@@ -14,12 +14,12 @@ const Footer = () => {
               Indra<span className="text-ic-saffron">Chavi</span>
             </h3>
             <p className="mb-4 text-white/70 text-sm">
-              AI-powered prosthetic color matching for facial rehabilitation across India. Precision formulation meets clinical care.
+              {t("footer_description")}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t("Quick Links")}</h4>
             <ul className="space-y-2 text-sm">
               {[
                 { to: "/", label: t("Home") },
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Institutional Partners</h4>
+            <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">{t("Institutional Partners")}</h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-2">
                 <Building2 className="h-4 w-4 shrink-0 text-ic-saffron mt-0.5" />
