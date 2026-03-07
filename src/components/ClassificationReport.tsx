@@ -7,6 +7,9 @@ import swatchData from "@/data/swatches.json";
 import { useI18n } from "@/lib/i18n";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
+import logoPgimer from "@/assets/logo-pgimer.jpeg";
+import logoDicMdart from "@/assets/logo-dic-mdart.png";
+import logoIcmr from "@/assets/logo-icmr.svg";
 
 interface Props {
   patientId: string;
