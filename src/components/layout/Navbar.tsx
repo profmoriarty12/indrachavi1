@@ -4,6 +4,9 @@ import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
+import logoPgimer from "@/assets/logo-pgimer.jpeg";
+import logoDicMdart from "@/assets/logo-dic-mdart.png";
+import logoIcmr from "@/assets/logo-icmr.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,18 +24,40 @@ const Navbar = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
-
   const toggleLang = () => setLang(lang === "en" ? "hi" : "en");
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
-      <div className="container mx-auto px-4 py-3">
+      {/* Institutional Logo Bar */}
+      <div className="bg-white border-b border-border/50">
+        <div className="container mx-auto px-4 py-1.5 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src={logoIcmr} alt="ICMR" className="h-10 md:h-12 w-auto object-contain" />
+            <div className="h-8 w-px bg-border hidden sm:block" />
+            <img src={logoPgimer} alt="PGIMER" className="h-10 md:h-12 w-auto object-contain rounded" />
+          </div>
+          <div className="hidden sm:flex flex-col items-center text-center px-4">
+            <span className="text-[10px] md:text-xs font-semibold text-foreground/80 tracking-wide uppercase">
+              IndraChavi — AI Prosthetic Color Matching
+            </span>
+            <span className="text-[9px] text-muted-foreground">
+              A Joint Research Initiative
+            </span>
+          </div>
+          <div className="flex items-center">
+            <img src={logoDicMdart} alt="DIC MDaRT UIET" className="h-10 md:h-12 w-auto object-contain" />
+          </div>
+        </div>
+      </div>
+
+      {/* Main Nav */}
+      <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-            <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-lg">इ</span>
+            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+              <span className="text-primary-foreground font-display font-bold text-base">इ</span>
             </div>
-            <span className="text-xl font-display font-bold text-foreground tracking-tight">
+            <span className="text-lg font-display font-bold text-foreground tracking-tight">
               Indra<span className="text-primary">Chavi</span>
             </span>
           </Link>
@@ -54,7 +79,6 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center gap-2">
-            {/* Language Toggle */}
             <button
               onClick={toggleLang}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold border border-border hover:bg-muted transition-colors"
