@@ -8,6 +8,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import LoadingScreen from "./components/common/LoadingScreen";
 import { I18nProvider } from "./lib/i18n";
+import IndraAIAssistant from "./components/IndraAIAssistant";
 
 const Home = lazy(() => import("./pages/Index"));
 const DashboardPage = lazy(() => import("./pages/DashboardPage"));
