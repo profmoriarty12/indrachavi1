@@ -83,22 +83,26 @@ const ClassificationReport = ({ patientId, patientName, patientAge, patientState
 
       {/* Printable PGIMER-style Report */}
       <div ref={reportRef} className="bg-white text-black max-w-[210mm] mx-auto shadow-lg">
-        {/* Hospital Header */}
-        <div className="border-b-4 border-[#b85c1a] px-8 pt-8 pb-5">
+        {/* Hospital Header with Logos */}
+        <div className="border-b-4 border-[#b85c1a] px-8 pt-6 pb-4">
           <div className="flex items-start justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-[#b85c1a] tracking-tight" style={{ fontFamily: "serif" }}>
+            <div className="flex items-center gap-3">
+              <img src={logoIcmr} alt="ICMR" className="h-14 w-auto object-contain" />
+              <img src={logoPgimer} alt="PGIMER" className="h-14 w-auto object-contain rounded" />
+            </div>
+            <div className="flex-1 text-center px-4">
+              <h1 className="text-xl font-bold text-[#b85c1a] tracking-tight" style={{ fontFamily: "serif" }}>
                 PGIMER
               </h1>
-              <p className="text-xs text-gray-600 mt-0.5">
+              <p className="text-[10px] text-gray-600 mt-0.5">
                 Postgraduate Institute of Medical Education & Research
               </p>
-              <p className="text-xs text-gray-500">Sector 12, Chandigarh 160012, India</p>
+              <p className="text-[10px] text-gray-500">Sector 12, Chandigarh 160012, India</p>
+              <p className="text-xs font-semibold text-gray-700 mt-1">Department of Prosthodontics</p>
+              <p className="text-[10px] text-gray-500">Maxillofacial Prosthetics Division</p>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-semibold text-gray-700">Department of Prosthodontics</p>
-              <p className="text-xs text-gray-500">Maxillofacial Prosthetics Division</p>
-              <p className="text-xs text-gray-500 mt-1">Report Date: {currentDate}</p>
+            <div className="flex items-center">
+              <img src={logoDicMdart} alt="DIC MDaRT" className="h-14 w-auto object-contain" />
             </div>
           </div>
           <div className="flex items-center gap-3 mt-3">
@@ -108,6 +112,7 @@ const ClassificationReport = ({ patientId, patientName, patientAge, patientState
             </span>
             <div className="h-[1px] flex-1 bg-gray-300" />
           </div>
+          <p className="text-[10px] text-gray-500 text-right mt-1">Report Date: {currentDate}</p>
         </div>
 
         {/* Patient Demographics */}
