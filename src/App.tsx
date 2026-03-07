@@ -8,6 +8,7 @@ import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import LoadingScreen from "./components/common/LoadingScreen";
 import { I18nProvider } from "./lib/i18n";
+import IndraAIAssistant from "./components/IndraAIAssistant";
 
 const Home = lazy(() => import("./pages/Index"));
 const DashboardPage = lazy(() => import("./pages/DashboardPage"));
@@ -30,7 +31,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Navbar />
-          <main className="min-h-screen pt-16">
+          <main className="min-h-screen pt-28">
             <Suspense fallback={<LoadingScreen />}>
               <Routes>
                 <Route path="/" element={<Home />} />
@@ -47,6 +48,7 @@ const App = () => (
             </Suspense>
           </main>
           <Footer />
+          <IndraAIAssistant />
         </BrowserRouter>
       </I18nProvider>
     </TooltipProvider>
