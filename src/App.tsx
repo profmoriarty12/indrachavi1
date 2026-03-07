@@ -48,6 +48,7 @@ const App = () => (
             </Suspense>
           </main>
           <Footer />
+          <IndraAIAssistant />
         </BrowserRouter>
       </I18nProvider>
     </TooltipProvider>
